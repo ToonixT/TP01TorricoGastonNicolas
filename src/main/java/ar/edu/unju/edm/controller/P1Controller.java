@@ -25,7 +25,7 @@ Punto1 apunto1;
 public String getPunto1Page(@RequestParam (name= "num") int num, Model model) {
 
 	apunto1.setNumero(num);
-	model.addAttribute("Puntox1", apunto1.ResFact());
+	model.addAttribute("Punto1", apunto1.resFact(num));
 	model.addAttribute("numero",num);
 	return "Punto01";
 }
