@@ -20,7 +20,6 @@ public class Punto1 {
 
     public int resFact(int number) {
 
-        // Factorial de forma recursiva
 
         int fact = 1;
         for (int i = 1; i <= number; i++) {
