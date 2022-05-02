@@ -22,10 +22,10 @@ public class Punto1 {
 
         // Factorial de forma recursiva
 
-        if (number == 0)
-            return 1;
-        else
-            return number * resFact(number - 1);
-
+        int fact = 1;
+        for (int i = 1; i <= number; i++) {
+            fact = i*fact;
+        }
+        return fact;
     }
 }

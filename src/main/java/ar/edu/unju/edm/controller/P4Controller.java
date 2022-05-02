@@ -18,12 +18,12 @@ public String getPunto4Page( @RequestParam (name = "num") int num, Model model )
 		Punto4 nPunto4 = new Punto4();
 		nPunto4.setNum(num);
 	if(nPunto4.esMes() == true)
-			whatis = "Si es un mes";
+			whatis = "Si corresponde a un mes";
 	else
-			whatis = "No es un mes";
+			whatis = "No corresponde a un mes";
 
 			model.addAttribute("Punto4", whatis);
-			
+			model.addAttribute("numanio", num);
 		return "punto04";
 	}
 }

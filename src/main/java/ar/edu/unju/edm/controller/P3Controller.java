@@ -13,7 +13,7 @@ import ar.edu.unju.edm.model.Punto3;
 public class P3Controller {
 
 	@GetMapping("/resolverPunto3")
-	public String getPunto3Page( @RequestParam (name = "num1") int num1,@RequestParam (name = "num2") int num2, Model model ) {
+	public String getPunto3Page( @RequestParam (name = "num1") int num1,@RequestParam (name = "num2") int num2,@RequestParam (name = "num3") int num3,@RequestParam (name = "num4") int num4,@RequestParam (name = "num5") int num5, Model model ) {
 		
 		Punto3 nPunto3 = new Punto3();
 		String esPar="SI es par", noPar="NO es par";
@@ -31,7 +31,29 @@ public class P3Controller {
 		else
 			model.addAttribute("Punto3dos", noPar);
 		
-		return "punto03";
 		//agregar 3,4,5 de la misma manera	
+		
+		nPunto3.setNum(num3);
+		if(nPunto3.esPar() == true)
+			model.addAttribute("Punto3tres", esPar);
+		else
+			model.addAttribute("Punto3tres", noPar);
+		
+		nPunto3.setNum(num4);
+		if(nPunto3.esPar() == true)
+			model.addAttribute("Punto3cuatro", esPar);
+		else
+			model.addAttribute("Punto3cuatro", noPar);
+		
+		nPunto3.setNum(num5);
+		if(nPunto3.esPar() == true)
+			model.addAttribute("Punto3cinco", esPar);
+		else
+			model.addAttribute("Punto3cinco", noPar);
+		
+		
+		return "punto03";
+		
+		
 	}
 }

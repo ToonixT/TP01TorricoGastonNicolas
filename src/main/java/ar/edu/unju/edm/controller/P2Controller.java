@@ -24,6 +24,8 @@ public class P2Controller {
 			whatis = "No es bisiesto";
 
 			model.addAttribute("Punto2", whatis);
+			model.addAttribute("numanio", yy);
+
 		return "punto02";
 	}
 }
